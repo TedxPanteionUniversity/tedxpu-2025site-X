@@ -1,5 +1,6 @@
 "use client";
 import TimelineItem from "./TimelineItem";
+import Link from "next/link";
 
 type EventType = {
   id: string;
@@ -12,13 +13,13 @@ const Events: EventType[] = [
   { id: "0", year: "2026", title: "TBA ", highlight: true },
   { id: "1", year: "2025", title: "Luminescense "},
   { id: "2", year: "2024", title: "Urban Maze" },
-  { id: "3", year: "2023", title: "IdeasWorthSpreading"},
-  { id: "4", year: "2022", title: "Reconcile" },
+  { id: "3", year: "2023", title: "Feed"},
+  { id: "4", year: "2022", title: "Happy Medium" },
   { id: "5", year: "2021", title: "Incentive"},
-  { id: "7", year: "2019", title: "Connect the Pieces",},
+  { id: "7", year: "2019", title: "The Age of Smupid",},
   { id: "8", year: "2018", title: "Elephant in The Room",},
   { id: "9", year: "2017", title: "Break The Pattern", },
-  { id: "10", year: "2016", title: "Frameworks ", },
+  { id: "10", year: "2016", title: "Frameworks", },
 ];
 
 export default function Timeline({ events = Events }: { events?: EventType[] }) {
@@ -39,7 +40,9 @@ export default function Timeline({ events = Events }: { events?: EventType[] }) 
               <div key={ev.id} className="relative flex items-center">
                 {/* Left side content */}
                 <div className={`w-1/2 ${side === "left" ? "pr-12 text-right" : ""}`}>
-                  {side === "left" && <TimelineItem event={ev} side={side} />}
+                  {side === "left" && <Link href={`/about/history?event=${ev.year}`}>
+  <TimelineItem event={ev} side={side} />
+</Link>}
                 </div>
                 
                 {/* Center dot */}
@@ -49,7 +52,9 @@ export default function Timeline({ events = Events }: { events?: EventType[] }) 
                 
                 {/* Right side content */}
                 <div className={`w-1/2 ${side === "right" ? "pl-12" : ""}`}>
-                  {side === "right" && <TimelineItem event={ev} side={side} />}
+                  {side === "right" && <Link href={`/about/history?event=${ev.year}`}>
+  <TimelineItem event={ev} side={side} />
+</Link>}
                 </div>
               </div>
             );
@@ -72,7 +77,9 @@ export default function Timeline({ events = Events }: { events?: EventType[] }) 
               </div>
               
               {/* Content */}
-              <TimelineItem event={ev} side="right" />
+              <Link href={`/about/history?event=${ev.year}`}>
+                <TimelineItem event={ev} side="right" />
+              </Link>
             </div>
           ))}
         </div>

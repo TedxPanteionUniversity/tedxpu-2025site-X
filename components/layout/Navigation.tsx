@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useSound } from "@/hooks/useSound";
+import { useSound } from "@/utils/useSound";
 
 export default function Navigation() {
   const pathname = usePathname();

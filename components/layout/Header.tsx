@@ -4,7 +4,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "@/components/layout/Navigation";
-import { useSound } from "@/hooks/useSound";
+import { useSound } from "@/utils/useSound";
 
 export default function Header() {
   const playClick = useSound("/sounds/Persona5.mp3");

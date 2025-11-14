@@ -16,7 +16,7 @@ export default function HeroSection() {
         className="object-cover opacity-50"  // adjust opacity here
         priority
       />
-      <div className="absolute inset-0 bg-linear-to-b from-black/80 to-black/60 z-0"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-black/60 to-black/30 z-0"></div>
 
       {/* Content */}
       <motion.div
