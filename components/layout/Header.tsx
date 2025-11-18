@@ -15,7 +15,7 @@ export default function Header() {
   
   return (
     <header className="w-full bg-black text-white fixed top-0 left-0 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto flex  items-center justify-between px-6 py-3 lg:flex-row lg:gap-x-160 gap-10">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3 lg:flex-row lg:gap-x-160 gap-10">
         <div className="w-full lg:w-1/2">
           {/* Replace /logo.png with your actual logo in /public/images */}
           <Link href="/"
@@ -26,7 +26,7 @@ export default function Header() {
             alt="TEDx Logo"
             width={200}
             height={50}
-            className="cursor-pointer"
+            className="cursor-pointer lg:scale-120"
           />
           </Link>
         </div>

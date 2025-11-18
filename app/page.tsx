@@ -12,7 +12,7 @@ export default function Home() {
         <HeroSection />
         <Marquee reverse />
       </section>
-        <Timeline/>
+        <Timeline />
       
     </main>
   );

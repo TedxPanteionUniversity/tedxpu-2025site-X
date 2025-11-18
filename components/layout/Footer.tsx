@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white mt-12">
-      <div className="px-16 py-8 flex flex-col md:flex-row justify-between items-start gap-6">
+    <footer className="text-white mt-12">
+      <div className="px-6 py-8 flex flex-col md:flex-row justify-between items-start gap-6">
           {/* Replace /logo.png with your actual logo in /public/images */}
-          <div className="flex flex-col space-y-3 max-w-xs">
+          <div className="flex flex-col space-y-1">
           <Image
             src="/images/logo-white.png"
             alt="TEDx Logo"
@@ -17,7 +17,7 @@ export default function Footer() {
             height={50}
           />
 
-        <p className="  text-gray-300">
+        <p className="px-2 text-gray-300">
             This independent <span className="text-red-600 left">TEDx</span> event is operated under license from TED.
           </p>
         </div>
