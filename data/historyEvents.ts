@@ -472,9 +472,7 @@ underlining how our consumption influences our viewpoints.`,
     introVideo: "",
     logo: "/images/history/2025.jpg",
     speakers: [
-      {
 
-      },
     ]
   }
 ];

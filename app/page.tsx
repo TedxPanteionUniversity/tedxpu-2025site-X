@@ -6,7 +6,7 @@ import Timeline from "@/components/home/Timeline";
 
 export default function Home() {
   return (
-    <main className="min-h-screen  text-white px-6 py-20">
+    <main className="min-h-screen  text-white py-20">
       <section style={{}}>
         <Marquee />
         <HeroSection />

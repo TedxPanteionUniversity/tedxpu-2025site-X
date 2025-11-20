@@ -45,7 +45,6 @@ export default function Navigation() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/event", label: "Event" },
-    { href: "/sponsors", label: "Sponsors" },
   ];
 
   const aboutLinks = [
