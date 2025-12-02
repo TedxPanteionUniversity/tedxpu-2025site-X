@@ -5,6 +5,7 @@ import { events } from "@/data/historyEvents";
 import { motion, AnimatePresence } from "framer-motion";
 import { toEmbedUrl } from "@/utils/convertYoutube";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 function HistoryContent() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -86,10 +87,15 @@ function HistoryContent() {
                             : "md:w-3/4" // no video → larger logo (75% width)
                         }
                       >
-                        <img
+                        <Image
                           src={event.logo}
                           alt={`${event.title} logo`}
+                          width={600}        // the *maximum* size it will ever display
+                          height={300}       // maintain the original aspect ratio
                           className="w-full h-auto object-contain rounded-lg"
+                          sizes="(max-width: 768px) 90vw,
+                                (max-width: 1200px) 50vw,
+                                500px"     // desktop size
                         />
                       </div>
 

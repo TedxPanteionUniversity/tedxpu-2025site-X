@@ -36,7 +36,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased absolute inset-0 z-1 pt-24`}>
           <ScrollToTop />
-          <ParticlesBackground />
           <div className="hidden lg:block">
             <Cursor />
           </div>

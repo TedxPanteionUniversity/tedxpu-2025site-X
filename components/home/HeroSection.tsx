@@ -21,6 +21,9 @@ export default function HeroSection() {
           fill
           className="object-contain opacity-60"  // adjust opacity here
           priority
+          sizes="(max-width: 640px) 100vw,
+         (max-width: 1024px) 100vw,
+         940px"
         />
       </div>
       <div className="absolute inset-0 bg-linear-to-b from-black/60 to-black/30 z-0"></div>
